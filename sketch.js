@@ -20,6 +20,7 @@ function setup() {
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
 
+
 	helicopterSprite=createSprite(width/2, 200, 10,10);
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
@@ -39,17 +40,20 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
+	objective_1 = createSprite (400,670,200,20);
+	objective_2 = createSprite(300,630,20,90);
+	objective_3 = createSprite(500,630,20,90);
 
 	//I don't know why this isn't showing. 
-	objective_1 = Bodies.rectangle(width/2,690,20,200,{isStatic:true});
+	objective_1 = Bodies.rectangle(width/2,690,200,20,{isStatic:true});
 	World.add(world,objective_1);
 	objective_1.shapeColor = "red"
 
-	objective_2 = Bodies.rectangle(300,640,100,20,{isStatic:true})
+	objective_2 = Bodies.rectangle(300,640,20,100,{isStatic:true})
 	World.add(world,objective_2);
 	objective_2.shapeColor = "red"
 
-	objective_3 = Bodies.rectangle(500,640,100,20,{isStatic:true})
+	objective_3 = Bodies.rectangle(500,640,20,100,{isStatic:true})
 	objective_3.shapeColor = "red"
 	World.add(world,objective_3);
 
